@@ -15,12 +15,17 @@ function printBooks (books) {
         li.innerText = book.title + "    låneknapp!";
 
         //printa text på knappen, låna om available är true, utlånad om available är false
-        button.innerText = book.available;
         bookList.appendChild(li);
         bookList.appendChild(button);
 
+        if (book.available == true) {
+                button.innerText = "Låna";  
+            } else {
+                button.innerText = "Lämna tillbaka";
+            }
 
     })
 }
+
 
 
